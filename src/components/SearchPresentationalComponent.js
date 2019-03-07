@@ -3,8 +3,8 @@ import React from 'react'
 
 const SearchPresentationalComponent = () => (
   <form>
-    <input placeholder="search"></input>
-    <button>Find</button>
+    <input placeholder="Enter contact name/number" />
+    <button>Search</button>
   </form>
 )
 
