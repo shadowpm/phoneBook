@@ -1,6 +1,8 @@
+let searchedText;
 const initialState = {
+  searchedText,
   contacts: []
-}
+};
 const contacts = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_CONTACT':
@@ -14,10 +16,12 @@ const contacts = (state = initialState, action) => {
             id: action.id
           }
         ]
-      }
+      };
+    case 'SEARCH':
+      return Object.assign({}, state, {searchedText: action.searchedText})
     default:
       return state
   }
-}
+};
 
 export default contacts

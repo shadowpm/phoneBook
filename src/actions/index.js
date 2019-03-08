@@ -1,4 +1,4 @@
-//search - delete - edit
+//delete - edit
 let nextContactId = 0;
 
 export const addContact = (name, number) => ({
@@ -6,4 +6,9 @@ export const addContact = (name, number) => ({
   id: nextContactId++,
   name,
   number
+});
+
+export const search = (searchedText) => ({
+  type: 'SEARCH',
+  searchedText
 });
