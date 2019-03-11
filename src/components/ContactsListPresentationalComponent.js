@@ -4,7 +4,7 @@ import ContactPresentationalComponent from './ContactPresentationalComponent'
 const ContactListPresentationalComponent = ({contacts}) => (
   <ul>
     {contacts.map(contact => (
-        <ContactPresentationalComponent name={contact.name} number={contact.number} id={contact.id}/>
+        <ContactPresentationalComponent key={contact.id} name={contact.name} number={contact.number} id={contact.id}/>
       )
     )}
   </ul>

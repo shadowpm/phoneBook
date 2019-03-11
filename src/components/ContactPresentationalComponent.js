@@ -5,7 +5,7 @@ import DeleteContact from "../containers/DeleteContact";
 const ContactPresentationalComponent = ({name, number, id}) => (
   <li>
     {name},
-    {number},
+    {number}
     <DeleteContact id={id}/>
   </li>
 );
