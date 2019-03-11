@@ -30,8 +30,10 @@ const AddContact = ({dispatch}) => {
             inputSearch.value = ''
           }}
         >
-          <input placeholder="Enter contact name/number" ref={node => (inputSearch = node)}/>
-          <button type="submit">Search</button>
+          <div>
+            <input placeholder="Enter contact name/number" ref={node => (inputSearch = node)}/>
+            <button type="submit">Search</button>
+          </div>
           <input placeholder="Enter name" ref={node => (inputName = node)}/>
           <input placeholder="Enter number" ref={node => (inputPhone = node)}/>
           <button type="submit">Add Contact</button>

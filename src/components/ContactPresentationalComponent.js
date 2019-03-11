@@ -1,15 +1,13 @@
 import React from 'react'
-import DeleteContactPresentationComponent from './DeleteContactPresentationComponent'
+import DeleteContact from "../containers/DeleteContact";
 //import PropTypes from 'prop-types'
 
-const ContactPresentationalComponent = ({name, number}) => (
-  <div>
-    <li>
-      {name},
-      {number}
-    </li>
-    <DeleteContactPresentationComponent/>
-  </div>
+const ContactPresentationalComponent = ({name, number, id}) => (
+  <li>
+    {name},
+    {number},
+    <DeleteContact id={id}/>
+  </li>
 );
 
 export default ContactPresentationalComponent
