@@ -18,7 +18,9 @@ const contacts = (state = initialState, action) => {
         ]
       };
     case 'SEARCH':
-      return Object.assign({}, state, {searchedText: action.searchedText})
+      return Object.assign({}, state, {searchedText: action.searchedText});
+    case 'DELETE_CONTACT':
+      return state.contacts.filter(contact => contact.id != action.id);
     default:
       return state
   }
