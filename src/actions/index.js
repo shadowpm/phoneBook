@@ -12,3 +12,8 @@ export const search = (searchedText) => ({
   type: 'SEARCH',
   searchedText
 });
+
+export const deleteContact = (id) => ({
+  type: 'DELETE_CONTACT',
+  id
+});
