@@ -1,4 +1,3 @@
-//delete - edit
 let nextContactId = 0;
 
 export const addContact = (name, number) => ({
@@ -15,5 +14,10 @@ export const search = (searchedText) => ({
 
 export const deleteContact = (id) => ({
   type: 'DELETE_CONTACT',
+  id
+});
+
+export const edit = (id) => ({
+  type: 'EDIT',
   id
 });
