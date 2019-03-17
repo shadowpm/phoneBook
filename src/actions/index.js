@@ -17,7 +17,8 @@ export const deleteContact = (id) => ({
   id
 });
 
-export const edit = (id) => ({
+export const edit = (id, editedContact) => ({
   type: 'EDIT',
-  id
+  id,
+  editedContact
 });

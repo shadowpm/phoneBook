@@ -1,6 +1,5 @@
-let searchedText;
 const initialState = {
-  searchedText,
+  searchedText: '',
   contacts: []
 };
 const contacts = (state = initialState, action) => {
@@ -18,12 +17,30 @@ const contacts = (state = initialState, action) => {
         ]
       };
     case 'SEARCH':
-      return Object.assign({}, state, {searchedText: action.searchedText});
+      return {
+        ...state,
+        searchedText: action.searchedText
+      };
     case 'DELETE_CONTACT':
       return {
         ...state,
         contacts: state.contacts.filter(contact => contact.id !== action.id)
       };
+    case 'EDIT':
+      return {
+        ...state,
+        contacts: state.contacts.map(contact => {
+          if (contact.id === action.id) {
+            return {
+              ...contact,
+              name: action.editedContact.name,
+              number: action.editedContact.number
+            }
+          } else {
+            return contact
+          }
+        })
+      }
     default:
       return state
   }
